@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.simpleapp7.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_destinationFragment"
+            app:destination="@id/destinationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.simpleapp7.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/ticketFragment"
+        android:name="com.example.simpleapp7.TicketFragment"
+        android:label="fragment_ticket"
+        tools:layout="@layout/fragment_ticket" >
+        <action
+            android:id="@+id/action_ticketFragment_to_orderTicketFragment"
+            app:destination="@id/orderTicketFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/destinationFragment"
+        android:name="com.example.simpleapp7.DestinationFragment"
+        android:label="fragment_destination"
+        tools:layout="@layout/fragment_destination" >
+        <argument
+            android:name="destinationList"
+            app:argType="string"
+            app:nullable="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/orderTicketFragment"
+        android:name="com.example.simpleapp7.OrderTicketFragment"
+        android:label="fragment_orderticket"
+        tools:layout="@layout/fragment_orderticket" />
+</navigation>
